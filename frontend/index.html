@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Python Electron Boilerplate</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="./src/render.js" defer></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<div class="container py-4">
+    <h3>Python Electron Boilerplate</h3>
+    <div class="row mt-4">
+        <div class="col-6">
+            <div class="card h-100 text-left">
+                <div class="card-body">
+                    <h4 class="card-title">Send Data</h4>
+                    <p class="card-text">This utilizes a ZMQ Push Socket in the frontend and a ZMQ Pull socket in the backend.</p>
+                    <input id="send-data" type="text" class="form-control mb-2">
+                    <button id="sendData" type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card h-100 text-left">
+                <div class="card-body">
+                    <h4 class="card-title">Send/Receive Data</h4>
+                    <p class="card-text">This utilizes a ZMQ Request Socket in the frontend and a ZMQ Reply socket in the backend.</p>
+                    <input id="send-receive-data" type="text" class="form-control mb-2">
+                    <input id="received-data" type="text" class="form-control mb-2" readonly>
+                    <button id="sendReceiveData" type="button" class="btn btn-primary">Send/Receive</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card w-100 text-left">
+                <div class="card-body">
+                    <h4 class="card-title">Status Data</h4>
+                    <p class="card-text">This utilizes a Queue and ZMQ Push Socket in the backend and a ZMQ Pull socket in the frontend.</p>
+                    <textarea id="status-data" cols="30" rows="10" class="form-control" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
